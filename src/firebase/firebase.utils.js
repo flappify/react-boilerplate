@@ -3,7 +3,7 @@ import 'firebase/firestore';
 import 'firebase/auth';
 import 'firebase/storage';
 const config ={
-    apiKey: "AIzaSyBMNQ0EsNfS0b2H9cPvsOu713FGtFhvbD0",
+    apiKey: "AIzaSyBMNQ0EsNfS0b2H9cPvsOu713FGtFhvbD0ADG",
     authDomain: "flappify-6a844.firebaseapp.com",
     databaseURL: "https://flappify-6a844.firebaseio.com",
     projectId: "flappify-6a844",
