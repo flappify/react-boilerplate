@@ -1,0 +1,279 @@
+.themetoggle{
+    background-color: #000;
+    color: darkgrey;
+}
+nav{
+    width: 100%;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+}
+nav .navbar{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .navbar .og{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .navbar .og .og-name{
+    font-size: 0.9rem;
+    letter-spacing: 0.2rem;
+}
+.toggle-og-name{
+    color: #fff;
+}
+nav .navbar .menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .navbar .menu .menu-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+nav .navbar .menu .menu-list ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav .navbar .menu .menu-list ul li{
+    position: relative;
+    margin: 0 20px;
+}
+nav .navbar .menu .menu-list .primary-menu a{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #3B3465;
+    padding:0.25rem;
+    letter-spacing: 0.06rem;
+}
+nav .navbar .menu .menu-list .primary-menu .drop-button{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #3B3465;
+    padding:0.25rem;
+    letter-spacing: 0.06rem;
+    cursor: pointer;
+}
+nav .navbar .menu .menu-list .primary-menu:nth-child(1)::before
+{
+    content: "";
+    position:absolute;
+    bottom: -5px;
+    width: 0%;
+    height: 2px;
+    background-color: #F39D00;
+}
+nav .navbar .menu .menu-list .primary-menu:nth-child(1):hover::before
+{
+    content: "";
+    position:absolute;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    border-radius: 3px;
+    background-color: #F39D00;
+    transition: width 0.6s ease-in;
+    transform-origin: left;
+}
+nav .navbar .menu .menu-list .primary-menu .create{
+    background-color: #F39D00;
+    padding: 0.5rem 2.8rem;
+    color: #fff;
+    border-radius: 2rem;
+    line-height: 0.6rem;
+    border:2px solid #F39D00;
+    font-size: 1rem;
+}
+nav .navbar .menu .menu-list .primary-menu .create:hover{
+    background-color: transparent;
+    color: #F39D00;
+}
+nav .navbar .menu .menu-list .drop-menu{
+    position: relative;
+    padding:15px 0;
+}
+nav .navbar .menu .menu-list .drop-menu .drop-button i{
+    margin: 0 0 0 0.4rem;
+    font-size: 1.2rem;
+    transform: translateY(1.2px);
+}
+nav .navbar .menu .menu-list .drop-menu:hover .drop-button i{
+    transform: rotate(180deg);
+    transition: transform .5s cubic-bezier(.29,1.42,.79,1) 0s,-webkit-transform .5s cubic-bezier(.29,1.42,.79,1) 0s;
+}
+nav .navbar .menu .menu-list .drop-menu a:hover{
+    border: none;
+    cursor: pointer;
+}
+nav .navbar .menu .menu-list .drop-menu a:hover i{
+    transform: rotate(180deg);
+}
+nav .navbar .menu .menu-list .drop-menu .sub-menu-list::before{
+    content: "";                  /* Pseudo-element has no content    */
+    position: absolute;             /* It's positioned absolutely       */
+    width: 15px;                     /* It has a width of 1 pixel        */
+    height: 15px;
+    top: -9px;
+    transform: rotate(45deg);
+    border-top: 1.5px solid #F39D00;
+    border-left: 1.5px solid #F39D00;
+    display: flex;
+    background-color: #fff;
+}
+nav .navbar .menu .menu-list .drop-menu .sub-menu-list{
+    width:250px;
+    padding: 0.8rem 0;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top:55px;
+    left: 50%;
+    transform: translateX(-50%);
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid #F39D00;
+    border-radius: 0.5rem;
+    z-index: 3;
+    background-color: #fff;
+}
+nav .navbar .menu .menu-list .drop-menu:hover .sub-menu-list{
+    display: flex;
+}
+nav .navbar .menu .menu-list .drop-menu .sub-menu-list li{
+    margin: 0.5rem 0;
+    padding: 0;
+}
+
+nav .navbar .menu .menu-list .drop-menu .sub-menu-list li a{
+    color:#3B3465;
+}
+nav .navbar .menu .menu-list .drop-menu .sub-menu-list li a:hover{
+    color: #F39D00;
+}
+nav .navbar .menu .menu-list .drop-menu .sub-menu-list-show{
+    display: flex;
+}
+nav .navbar .hamburger{
+    width: 2rem;
+    height: 1.2rem;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .navbar .hamburger .line{
+    width: 100%;
+    height: 0.25rem;
+    background-color: #3B3465;
+}
+.toggle .fa-moon{
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin: 0 1.5rem;
+}
+.toggle .fa-moon:hover{
+    color: darkgrey !important;
+}
+nav .signout{
+    background-color: red;
+    padding: 0.5rem;
+    color: #fff;
+    border-radius: 2rem;
+    line-height: 0.6rem;
+    border:2px solid red;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: padding .8s cubic-bezier(.29,1.42,.79,1) 0s,
+    -webkit-transform .8s cubic-bezier(.29,1.42,.79,1) 0s;
+}
+nav .signout:hover{
+    background-color: orangered;
+    padding: 0.5rem 2.8rem;
+    color: #fff;
+    border-radius: 2rem;
+    line-height: 0.6rem;
+    border:2px solid orangered;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: padding .8s cubic-bezier(.29,1.42,.79,1) 0s,
+    -webkit-transform .8s cubic-bezier(.29,1.42,.79,1) 0s;
+}
+nav .signout div{
+    margin-left: 0.5rem;
+    display: none;
+}
+nav .signout:hover div{
+    display: block;
+    transition: padding .8s cubic-bezier(.29,1.42,.79,1) 0s,
+    -webkit-transform .8s cubic-bezier(.29,1.42,.79,1) 0s;
+}
+/**THEME-TOGGLE**/
+.toggle-white{
+    color: darkgrey !important;
+}
+.themetoggle nav{
+    background-color: #000;
+}
+.themetoggle nav .navbar .menu .menu-list .drop-menu .sub-menu-list li a{
+    color: darkgrey;
+}
+.themetoggle nav .navbar .menu .menu-list .drop-menu .sub-menu-list li a:hover{
+    color: #fff;
+}
+.themetoggle nav .navbar .menu .menu-list .drop-menu .sub-menu-list{
+    border: 2px solid darkgray;
+    background-color: #000;
+}
+.themetoggle nav .navbar .menu .menu-list .drop-menu .sub-menu-list::before{
+    background-color: #000;
+    border-color: darkgrey;
+}
+/**THEME-TOGGLE-END**/
+.toggle .fa-sun{
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.toggle .fa-sun:hover{
+    color: #F39D00 !important;
+}
+@media only screen and (max-width:1024px)
+{
+    nav .navbar{
+        width: 90vw;
+        margin: 0 5vw;
+    }
+    nav .navbar .menu .menu-list ul{
+        display: none;
+    }
+    nav .navbar .hamburger{
+        display: flex;
+    }
+    nav .navbar .og .og-logo img{
+        width: 18vw;
+    }
+    nav .navbar .og .og-name{
+        font-size:0.9rem;
+    }
+}
