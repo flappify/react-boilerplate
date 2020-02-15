@@ -3,14 +3,7 @@ import 'firebase/firestore';
 import 'firebase/auth';
 import 'firebase/storage';
 const config ={
-    apiKey: "AIzaSyBMNQ0EsNfS0b2H9cPvsOu713FGtFhvbD0ADG",
-    authDomain: "flappify-6a844.firebaseapp.com",
-    databaseURL: "https://flappify-6a844.firebaseio.com",
-    projectId: "flappify-6a844",
-    storageBucket: "flappify-6a844.appspot.com",
-    messagingSenderId: "154091819423",
-    appId: "1:154091819423:web:d4adc2911b9be72d276daa"
-  };
+};
   firebase.initializeApp(config);
   
   export const createUserProfileDocument = async (userAuth, additionalData) => {
